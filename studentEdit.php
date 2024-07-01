@@ -61,7 +61,7 @@
                             $sql2 = "UPDATE tbl_student SET First_name='$FirstName',Last_name='$LastName',Email='$Email' WHERE id='$studentid'";
                             $db = dbConn();
                             $db->query($sql2);
-                            header("Location:studentcreate.php");
+                            header("Location:index.php");
 
 
 

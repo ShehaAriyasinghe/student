@@ -41,7 +41,7 @@
                         if (@$mode == 'delete') {
                             $upsql = "UPDATE tbl_student SET deletestatus='0' WHERE id='$studentid'";
                             $result = $db->query($upsql);
-                            header("Location:studentcreate.php");
+                            header("Location:index.php");
                         }
 
 
@@ -217,7 +217,7 @@
                                 <td><?php echo $row['Last_name']; ?></td>
                                 <td><?php echo $row['Email']; ?></td>
                                 <td><a href="studentEdit.php?mode=edit&studentid=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a></td>
-                                <td><a onclick="return confirm('Are you sure you want to delete this record ?');" href="studentcreate.php?mode=delete&studentid=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a></td>
+                                <td><a onclick="return confirm('Are you sure you want to delete this record ?');" href="index.php?mode=delete&studentid=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a></td>
 
 
 
